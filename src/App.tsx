@@ -1,7 +1,17 @@
+import AdvancedStatistics from './components/AdvancedStatistics'
+import BoostLinks from './components/BoostLinks'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import MainSection from './components/MainSection'
+
 function App() {
   return (
     <div>
-      <h1 className="text-red-500">Setup</h1>
+      <Header />
+      <MainSection />
+      <AdvancedStatistics />
+      <BoostLinks />
+      <Footer />
     </div>
   )
 }
