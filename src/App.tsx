@@ -6,7 +6,7 @@ import MainSection from './components/MainSection'
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen font-primary text-body">
       <Header />
       <MainSection />
       <AdvancedStatistics />
