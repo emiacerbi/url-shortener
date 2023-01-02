@@ -11,7 +11,7 @@ function Header() {
     <header>
       <Wrapper>
         <div className="flex items-center px-5 py-7">
-          <img src="/images/logo.svg" alt="" />
+          <img src="/images/logo.svg" alt="shortly logo" />
 
           <div className="hidden">
             <ul>
@@ -20,12 +20,12 @@ function Header() {
               <li>Resourcers</li>
             </ul>
 
-            <Button>Login</Button>
-            <Button>Sign Up</Button>
+            <Button rounded="rounded-full">Login</Button>
+            <Button rounded="rounded-full">Sign Up</Button>
           </div>
 
           <RxHamburgerMenu
-            className="ml-auto"
+            className="ml-auto text-2xl"
             onClick={() => setIsModalVisible(!isModalVisible)}
           />
 

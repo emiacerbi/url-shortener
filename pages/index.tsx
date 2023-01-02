@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen bg-neutral-100 font-primary text-body">
+      <div className="min-h-screen font-primary text-body">
         <Header />
         <MainSection />
         <Shortener />
