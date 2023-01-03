@@ -15,12 +15,18 @@ function Header() {
 
           <div className="hidden md:flex w-full gap-8 items-center text-neutral-400">
             <ul className="flex gap-8">
-              <li>Features</li>
-              <li>Pricing</li>
-              <li>Resourcers</li>
+              <li className="cursor-pointer hover:text-neutral-900">
+                Features
+              </li>
+              <li className="cursor-pointer hover:text-neutral-900">Pricing</li>
+              <li className="cursor-pointer hover:text-neutral-900">
+                Resourcers
+              </li>
             </ul>
 
-            <button className="ml-auto">Login</button>
+            <button className="ml-auto cursor-pointer hover:text-neutral-900">
+              Login
+            </button>
             <Button rounded="rounded-full">Sign Up</Button>
           </div>
 
