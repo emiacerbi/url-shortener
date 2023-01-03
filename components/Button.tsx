@@ -7,7 +7,7 @@ type Props = {
 function Button({ children, rounded, width = 'fit' }: Props) {
   return (
     <button
-      className={`bg-primary-500 text-neutral-100 px-8 py-4 font-bold w-fit mx-auto ${rounded} ${width}`}
+      className={`bg-primary-500 text-neutral-100 px-8 py-3 font-bold w-fit ${rounded} ${width}`}
     >
       {children}
     </button>

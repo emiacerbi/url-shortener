@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-100">
       <Wrapper>
-        <div className="flex flex-col items-center text-center text-base gap-12 text-neutral-300 p-12">
+        <div className="flex flex-col md:flex-row md:justify-between md:text-left md:items-start items-center text-center text-base gap-12 text-neutral-300 py-12">
           <Logo color="white" />
 
           <ul className="grid gap-2">

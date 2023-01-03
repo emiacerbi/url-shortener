@@ -21,6 +21,9 @@ module.exports = {
       fontFamily: {
         primary: 'Poppins, sans-serif',
       },
+      maxWidth: {
+        'screen-lg': '1105px',
+      },
     },
   },
   plugins: [],

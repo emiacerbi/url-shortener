@@ -6,7 +6,13 @@ type Props = {
 }
 
 function Wrapper({ children, padding }: Props) {
-  return <div className={`max-w-screen-xl mx-auto ${padding}`}>{children}</div>
+  return (
+    <div
+      className={`max-w-screen-lg mx-auto px-6 md:px-8 lg:px-10 xl:px-0 ${padding}`}
+    >
+      {children}
+    </div>
+  )
 }
 
 export default Wrapper
