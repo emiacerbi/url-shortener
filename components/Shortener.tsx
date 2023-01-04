@@ -2,11 +2,17 @@ import { useState, ChangeEvent, SyntheticEvent } from 'react'
 import Button from './Button'
 import Wrapper from './Wrapper'
 import { isValidUrl } from '../helpers/isValidUrl'
+import { useRouter } from 'next/router'
 
 function Shortener() {
   const [linkInput, setLinkInput] = useState('')
   const [error, setError] = useState<boolean | string>(false)
   const [success, setSuccess] = useState<boolean | string>(false)
+  const router = useRouter()
+
+  const refreshData = () => {
+    router.replace(router.asPath)
+  }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setLinkInput(e.target.value)
@@ -48,6 +54,8 @@ function Shortener() {
     const data = await response.json()
     console.log(data)
     setLinkInput('')
+
+    refreshData()
   }
 
   const errorRing = error

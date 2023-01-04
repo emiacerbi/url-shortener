@@ -21,7 +21,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ links }: { links: Link[] }) {
-  console.log(links)
   return (
     <>
       <Head>
