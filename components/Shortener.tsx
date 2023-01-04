@@ -15,6 +15,13 @@ function Shortener() {
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault()
 
+    const hasHttps = linkInput.slice(0, 8)
+
+    if (hasHttps !== 'https://') {
+      setError('Please paste the full link')
+      return
+    }
+
     if (linkInput.length < 8) {
       setError('Link should be at least 8 characters long')
       return
@@ -44,7 +51,7 @@ function Shortener() {
   }
 
   const errorRing = error
-    ? 'ring ring-red-500 focus:outline-none'
+    ? 'ring ring-red-500 focus:outline-none placeholder:text-red-500'
     : 'ring-primary-500'
 
   const errorScale = error ? 'scale-100' : 'scale-0'
