@@ -35,6 +35,5 @@ export async function getServerSideProps({ params }: Props) {
       permantent: false,
       basePath: false,
     },
-    props: {},
   }
 }

@@ -5,8 +5,23 @@ import AdvancedStatistics from '../components/AdvancedStatistics'
 import BoostLinks from '../components/BoostLinks'
 import Footer from '../components/Footer'
 import Shortener from '../components/Shortener'
+import CreatedLinks from '../components/CreatedLinks'
+import { PrismaClient } from '@prisma/client'
+import { Link } from '../types'
 
-export default function Home() {
+export async function getServerSideProps() {
+  const prisma = new PrismaClient()
+  const links = await prisma.link.findMany()
+
+  prisma.$disconnect()
+
+  return {
+    props: { links },
+  }
+}
+
+export default function Home({ links }: { links: Link[] }) {
+  console.log(links)
   return (
     <>
       <Head>
@@ -23,6 +38,7 @@ export default function Home() {
         <Header />
         <MainSection />
         <Shortener />
+        <CreatedLinks links={links} />
         <AdvancedStatistics />
         <BoostLinks />
         <Footer />

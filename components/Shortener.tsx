@@ -72,7 +72,7 @@ function Shortener() {
 
           <div className="md:flex-row gap-4 flex flex-col">
             <input
-              className={`py-3 px-4 rounded-lg focus:outline-none focus:ring w-full ${errorRing}`}
+              className={`py-3 px-4 rounded-lg hover:outline hover:outline-neutral-400 focus:outline-none focus:ring w-full ${errorRing}`}
               placeholder="Shorten a link here..."
               name="link"
               onChange={handleChange}
