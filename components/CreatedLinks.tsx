@@ -12,7 +12,7 @@ function CreatedLinks({ links }: Props) {
     <section className="py-10 pt-40 -mt-20 bg-neutral-100">
       <Wrapper>
         <div className="flex flex-col gap-4">
-          {links.map((link: Link) => (
+          {links?.map((link: Link) => (
             <LinkItem key={link.id} link={link} />
           ))}
         </div>

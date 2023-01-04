@@ -11,12 +11,18 @@ import { Link } from '../types'
 
 export async function getServerSideProps() {
   const prisma = new PrismaClient()
-  const links = await prisma.link.findMany()
 
-  prisma.$disconnect()
+  try {
+    const links = await prisma.link.findMany()
+    prisma.$disconnect()
 
-  return {
-    props: { links },
+    return {
+      props: { links },
+    }
+  } catch (error) {
+    return {
+      props: { message: 'No links' },
+    }
   }
 }
 
