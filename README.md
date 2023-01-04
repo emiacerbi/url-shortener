@@ -37,7 +37,7 @@ Edit the .env file with your database info (should look like .env.example). Then
 
 ### Links
 
-- Live site URL: [Link](Link)
+- Live site URL: [Link](https://url-shortener-five-eta.vercel.app/)
 
 ### Built with
 
