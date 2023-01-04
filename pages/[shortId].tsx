@@ -16,7 +16,6 @@ export async function getServerSideProps({ params }) {
 
   prisma.$disconnect()
 
-  console.log(data)
   if (!data) {
     return {
       redirect: {
