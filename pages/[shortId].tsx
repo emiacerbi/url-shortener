@@ -1,12 +1,16 @@
-// @ts-nocheck
-
 import { PrismaClient } from '@prisma/client'
+
+type Props = {
+  params: {
+    shortId: string
+  }
+}
 
 export default function ShortIdPage() {
   return <div>ShortID Redirect URL</div>
 }
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({ params }: Props) {
   const prisma = new PrismaClient()
   const { shortId } = params
 
